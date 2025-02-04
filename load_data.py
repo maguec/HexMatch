@@ -21,3 +21,9 @@ if __name__ == "__main__":
     consumers = Consumers()
     consumers.load(client)
 
+    provider_adjacents = HasProviders()
+    provider_adjacents.load(client)
+
+    consumer_adjacents = HasConsumers()
+    consumer_adjacents.load(client)
+
