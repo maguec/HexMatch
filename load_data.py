@@ -15,3 +15,9 @@ if __name__ == "__main__":
     hex_adjacents = HasAdjacents()
     hex_adjacents.load(client)
 
+    producers = Providers()
+    producers.load(client)
+
+    consumers = Consumers()
+    consumers.load(client)
+

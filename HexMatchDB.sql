@@ -7,10 +7,12 @@ CREATE TABLE Hex (
 
 CREATE TABLE Provider (
   id INT64 NOT NULL,
+  available INT64 NOT NULL,
 ) PRIMARY KEY (id);
 
 CREATE TABLE Consumer (
   id INT64 NOT NULL,
+  searching INT64 NOT NULL,
 ) PRIMARY KEY (id);
 
 -- Edge Tables

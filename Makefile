@@ -19,6 +19,9 @@ dbclean: ## Remove all  table dat
 	@gcloud spanner databases execute-sql hexmatchdb  --instance=hexmatch --sql='DELETE from Hex WHERE id < 100000000;'
 	@gcloud spanner databases execute-sql hexmatchdb  --instance=hexmatch --sql='DELETE from Provider WHERE id < 100000000;'
 	@gcloud spanner databases execute-sql hexmatchdb  --instance=hexmatch --sql='DELETE from Consumer WHERE id < 100000000;'
+	@gcloud spanner databases execute-sql hexmatchdb  --instance=hexmatch --sql='DELETE from HasProvider WHERE id < 100000000;'
+	@gcloud spanner databases execute-sql hexmatchdb  --instance=hexmatch --sql='DELETE from HasConsumer WHERE id < 100000000;'
+	@gcloud spanner databases execute-sql hexmatchdb  --instance=hexmatch --sql='DELETE from HasAdjacent WHERE id < 100000000;'
 
 
 dbdrop: ## Drop all tables DANGER

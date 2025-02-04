@@ -21,3 +21,36 @@ class Hexes(SpannerTable):
             reader = csv.DictReader(f)
             self.loadItems([Hex(row) for row in reader])
 
+@dataclass
+class Consumer:
+    id: int
+    searching: int
+
+    def __init__(self, consumer):
+        self.id = int(consumer["id"])
+        self.searching = int(consumer["searching"])
+
+@dataclass
+class Consumers(SpannerTable):
+
+    def __init__(self):
+        with open("data/Consumer.csv") as f:
+            reader = csv.DictReader(f)
+            self.loadItems([Consumer(row) for row in reader])
+
+@dataclass
+class Provider:
+    id: int
+    available: int
+
+    def __init__(self, producer):
+        self.id = int(producer["id"])
+        self.searching = int(producer["available"])
+
+@dataclass
+class Providers(SpannerTable):    
+
+    def __init__(self):
+        with open("data/Provider.csv") as f:
+            reader = csv.DictReader(f)
+            self.loadItems([Provider(row) for row in reader])
