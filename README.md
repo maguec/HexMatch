@@ -1,9 +1,9 @@
-# Analyize the Panama Papers with Spanner Graph
+# HexMatch
 
-This is a demo on how to query the Panama Papers
+Let's match up consumers and providers on a hexagonal board
 
 
-![graph](./docs/graph.png)
+![map](./docs/hex.png)
 
 
 ## Setup Gcloud 
@@ -24,13 +24,7 @@ pip install -r requirements.txt
 ./load_data.py
 ```
 
-## Run the Webapp
-
-```bash
-./app.py
-```
-
-## Start Queryring
+## Start Querying
 
 [Queries](./SampleQueries.md)
 
