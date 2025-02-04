@@ -1,0 +1,4 @@
+setuptools
+dataclass_csv
+google-cloud-spanner
+alive_progress

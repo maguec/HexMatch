@@ -2,6 +2,7 @@
 
 CREATE TABLE Hex (
   id INT64 NOT NULL,
+  radius INT64 NOT NULL,
 ) PRIMARY KEY (id);
 
 CREATE TABLE Provider (
