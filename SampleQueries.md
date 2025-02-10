@@ -46,8 +46,9 @@ ORDER BY Distance  LIMIT 3
 
 ```sql
 GRAPH HexMatch
-MATCH(c:Consumer{id: 12})-[l:HAS_CONSUMER]->(h:Hex)-[a:HAS_ADJACENT]->{1,5}(ph:Hex)<-[:HAS_PROVIDER]-(p:Provider{available: 1})
+MATCH ANY SHORTEST (c:Consumer{id: 12})-[l:HAS_CONSUMER]->(h:Hex)-[a:HAS_ADJACENT]->{1,5}(ph:Hex)<-[:HAS_PROVIDER]-(p:Provider{available: 1})
 WHERE p.rating >= 4
 return c.id as Consumer, ARRAY_LENGTH(a) as Distance, p.id as Provider
 ORDER BY Distance
+
 ```
