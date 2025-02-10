@@ -32,3 +32,12 @@ OPTIONAL MATCH (h)<-[:HAS_CONSUMER]-(c:Consumer)
 RETURN h.id AS hex_id, count(DISTINCT p) AS provider_count, count(DISTINCT c) AS consumer_count
 ORDER by hex_id
 ```
+
+## Find me all available Providers closest to Consumer 45
+
+```sql
+GRAPH HexMatch
+MATCH(c:Consumer{id: 45})-[l:HAS_CONSUMER]->(h:Hex)-[a:HAS_ADJACENT]->{1,5}(ph:Hex)<-[:HAS_PROVIDER]-(p:Provider{available: 1})
+return c.id as Consumer, ARRAY_LENGTH(a) as Distance, p.id as Provider
+ORDER BY Distance  LIMIT 3
+```
