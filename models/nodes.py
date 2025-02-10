@@ -42,10 +42,12 @@ class Consumers(SpannerTable):
 class Provider:
     id: int
     available: int
+    rating: int
 
     def __init__(self, producer):
         self.id = int(producer["id"])
         self.searching = int(producer["available"])
+        self.rating = int(producer["rating"])
 
 @dataclass
 class Providers(SpannerTable):    

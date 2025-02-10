@@ -8,6 +8,7 @@ CREATE TABLE Hex (
 CREATE TABLE Provider (
   id INT64 NOT NULL,
   available INT64 NOT NULL,
+  rating INT64 NOT NULL,
 ) PRIMARY KEY (id);
 
 CREATE TABLE Consumer (
