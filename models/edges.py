@@ -8,10 +8,12 @@ import csv
 class HasAdjacent:
     id: int
     to_id: int
+    radius: int
 
     def __init__(self, edge):
         self.id = int(edge["id"])
         self.to_id = int(edge["to_id"])
+        self.radius = int(edge["radius"])
 
 
 @dataclass
