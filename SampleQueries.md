@@ -50,5 +50,4 @@ MATCH ANY SHORTEST (c:Consumer{id: 12})-[l:HAS_CONSUMER]->(h:Hex)-[a:HAS_ADJACEN
 WHERE p.rating >= 4
 return c.id as Consumer, ARRAY_LENGTH(a) as Distance, p.id as Provider
 ORDER BY Distance
-
 ```
