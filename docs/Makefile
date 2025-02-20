@@ -6,5 +6,5 @@ help:  ## Display this help
 
 gendiagrams: ## Generate Schema
 	@echo "Generating Diagrams"
-	@rm -f *.png
+	@rm -f graph.png
 	@dot -Tpng graph.dot > graph.png
