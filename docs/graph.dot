@@ -1,6 +1,6 @@
 digraph diag {
   node [shape=Mrecord, color=Blue, fillcolor=Blue, style=filled, fontcolor=white];
-  edge [fontcolor=red, color=red,fontsize=8];
+  edge [fontcolor=yellow, color=yellow,fontsize=10];
   bgcolor=black;
   nodesep=0.2;
 
