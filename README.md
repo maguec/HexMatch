@@ -4,6 +4,7 @@ Let's match up consumers and providers on a hexagonal board
 
 
 ![map](./docs/hex.png)
+![graph](./docs/graph.png)
 
 
 ## Setup Gcloud 
