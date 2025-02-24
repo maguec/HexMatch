@@ -3,7 +3,10 @@
 Let's match up consumers and providers on a hexagonal board
 
 
+## Sample Map
 ![map](./docs/hex.png)
+
+## Sample Relationships
 ![graph](./docs/graph.png)
 
 
